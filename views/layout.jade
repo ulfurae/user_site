@@ -1,0 +1,25 @@
+doctype html
+html(lang="is")
+	head
+		title= title
+		link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet")
+		link(rel='stylesheet' href='/dist/stylesheets/styles.css')
+	body
+		header
+			div(style='float:left; margin-right:20px')
+				h1(class='logo') Minifacebook	
+			ul.list-inline
+				li: a(href='/', class='ulmenu').btn Forsíða
+				li: a(href='/logout', class='ulmenu').btn Skrá út
+			img(src='/images/eat.svg', style='position:absolute;right:0px; top:-32px')
+		hr
+		if session && session.user
+			|Þú ert inni sem 
+			b= session.user.name
+			span= ' (' + session.user.username + ')'
+			br
+			br
+		main
+			block content
+
+	script(src="/javascripts/frontend.js")

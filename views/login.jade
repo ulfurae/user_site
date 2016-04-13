@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	p Skráðu þig inn á Minifacebook.
+
+	form(method='post', class='loginform')
+		fieldset.form-group
+			label(for="username") Notendanafn
+			input(id="username" type="text" placeholder="notendanafn" name="username" required=true).form-control
+		fieldset.form-group
+			label(for="password") Lykilorð
+			input(id="password" type="password" name="password" placeholder="lykilorð" required=true).form-control
+		button.btn.btn-lg.btn-primary.btn-block Skrá inn 
+			span.glyphicon.glyphicon-menu-right
+		if alert
+			br
+			.alert.alert-danger= alert

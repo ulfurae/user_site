@@ -1,0 +1,25 @@
+extends index
+
+block wall
+	p Skrifaðu nýjan status:
+	form(method='post', name='postform', action='/savepost')
+		input(type='hidden', name='user', value=session.user.username)
+		textarea( name='content', class='wallinput', placeholder="Hvað ertu að hugsa um?").btn-block
+		button.btn.btn-info Skrifa 
+			span.glyphicon.glyphicon-pencil
+	hr
+	if wallposts
+		- var count = 0;
+		each post in wallposts
+			if count<10
+				div(style='max-width:500px;min-width:250px').panel.panel-info
+					div.panel-heading
+						b= post.username + ' '
+						| skrifaði:
+						br
+						i(style='color:#999; font-size:12px')= post.date
+					div.panel-body
+						p(style='font-size:16px')= post.wallpost
+
+			- count++;
+		

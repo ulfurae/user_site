@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	if session && session.user
+		block wall
+		if currentUrl === '/'
+			a(href='/wall').btn.btn-lg.btn-info Fara á vegg 
+				span.glyphicon.glyphicon-book
+	else
+		p Velkomin á Minifacebook!
+		a(href='/login').btn.btn-lg.btn-primary Skrá inn  
+			span.glyphicon.glyphicon-menu-right 
+		br
+		br
+		a(href='/register').btn.btn-success Nýskráning

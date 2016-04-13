@@ -1,0 +1,44 @@
+body {
+  padding: 10px;
+  font: Helvetica, Arial, sans-serif; }
+
+.logo {
+  margin-top: 10px;
+  margin-bottom: 12px; }
+
+header {
+  display: flex;
+  margin-bottom: -20px; }
+
+header .left {
+  flex: 8; }
+
+header .right {
+  flex: 0.8; }
+
+header .right img {
+  width: 100%; }
+
+main {
+  padding: 15px;
+  min-width: 300px;
+  max-width: 700px; }
+
+.ulmenu {
+  color: lightblue;
+  font-size: 16px;
+  margin-top: 10px; }
+
+.wallinput {
+  padding: 4px;
+  line-height: 18px;
+  max-width: 420px;
+  min-width: 250px;
+  height: 68px;
+  overflow: hidden;
+  resize: none; }
+
+.loginform {
+  max-width: 300px;
+  min-width: 150px;
+  font-size: 16px; }

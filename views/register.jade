@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  p Búðu til nýjan aðgang að Minifacebook.
+  
+  if msg
+    p= msg
+  else
+    form(method='post', class='loginform')
+      fieldset.form-group
+        label(for="username") Nafn
+        input(id="username" type="text" placeholder="nafn" name="name"  required=true).form-control
+      fieldset.form-group  
+        label(for="username") Notendanafn
+        input(id="username" type="text" placeholder="notendanafn" name="username" required=true).form-control
+      fieldset.form-group
+        label(for="password") Lykilorð
+        input(id="password" type="password" name="password" placeholder="lykilorð" required=true).form-control
+      input(type="submit" value="Búa til aðgang").btn.btn-lg.btn-success.btn-block
